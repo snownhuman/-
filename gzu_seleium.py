@@ -1,3 +1,4 @@
+#此处使用Edge
 import requests.cookies
 from selenium import webdriver
 from selenium.webdriver.common.by import  By
@@ -7,9 +8,19 @@ import requests
 from PIL import Image
 from lxml import etree
 
+#用户输入
+name=input('请输入您的学号')
+passwd=input('请输入您的账号')
+chaoji_name=input('请输入您的超级鹰账号')
+chaoji_passwd=input('请输入您的超级鹰密码')
+chaoji_key=input('请输入您的超级鹰key')
+
 #初始网页驱动对象
-drievr=webdriver.Edge()
-url='https://jw.gzu.edu.cn/default2.aspx'
+option=webdriver.EdgeOptions()
+option.add_argument('--headless')
+drievr=webdriver.Edge(options=option)
+#填入你的网页登录url
+url='#####'
 drievr.get(url)
 
 
@@ -26,12 +37,7 @@ img=im.crop((left,top,right,height))
 img.save('page.jpg')
 
 
-#用户输入
-name=input('请输入您的学号')
-passwd=input('请输入您的账号')
-chaoji_name=input('请输入您的超级鹰账号')
-chaoji_passwd=input('请输入您的超级鹰密码')
-chaoji_key=input('请输入您的超级鹰key')
+
 
 
 #使用超级鹰对验证码进行识别
@@ -77,7 +83,6 @@ tree=etree.HTML(response)
 # kemu=tree.xpath('/html/body/form/div/div/span/table[2]/tbody/tr[3]/td[3]/text()')
 # print(kemu)
 # print(response)
-#https://jw.gzu.edu.cn/xs_main.aspx?xh=#a
-#https://jw.gzu.edu.cn/xs_main.aspx?xh=#a
+#此处session已更改
 sleep(100)
 drievr.close()
