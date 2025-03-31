@@ -77,7 +77,7 @@ tree=etree.HTML(response)
 # kemu=tree.xpath('/html/body/form/div/div/span/table[2]/tbody/tr[3]/td[3]/text()')
 # print(kemu)
 # print(response)
-#https://jw.gzu.edu.cn/xs_main.aspx?xh=2300890303#a
-#https://jw.gzu.edu.cn/xs_main.aspx?xh=2300890303#a
+#https://jw.gzu.edu.cn/xs_main.aspx?xh=#a
+#https://jw.gzu.edu.cn/xs_main.aspx?xh=#a
 sleep(100)
 drievr.close()
