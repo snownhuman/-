@@ -10,7 +10,7 @@ from lxml import etree
 
 #用户输入
 name=input('请输入您的学号')
-passwd=input('请输入您的账号')
+new_passwd=input('请输入您的账号')
 chaoji_name=input('请输入您的超级鹰账号')
 chaoji_passwd=input('请输入您的超级鹰密码')
 chaoji_key=input('请输入您的超级鹰key')
@@ -54,7 +54,7 @@ scrcetcode.send_keys(New_yanzhengma)
 username=drievr.find_element(by=By.ID,value='txtUserName')
 username.send_keys(name)
 passwd=drievr.find_element(by=By.ID,value='TextBox2')
-passwd.send_keys(passwd)
+passwd.send_keys(new_passwd)
 yanzheng=drievr.find_element(by=By.ID,value='txtSecretCode')
 button=drievr.find_element(by=By.ID,value='Button1')
 button.click()
